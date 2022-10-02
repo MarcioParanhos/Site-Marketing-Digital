@@ -117,10 +117,14 @@ button:hover {
     min-width: 95vw;
     text-align: center;
   }
+  .main-content p {
+    font-size: 1.2rem;
+  }
   .main-container h1 {
     font-size: 1.6rem;
     line-height: 1;
     margin-bottom: 20px;
+    width: 100vw;
   }
   .main{
     flex-direction: column;
