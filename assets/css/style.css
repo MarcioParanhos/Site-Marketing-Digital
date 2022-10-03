@@ -142,13 +142,15 @@ svg {
 .services-container h1 {
   font-size: 2rem;
   color: #ea5455;
-  border-bottom: 3px solid #ea5455;
+  border-bottom: 4px solid #ea5455;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   width: 28%;
   text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
+  font-weight: bold;
+  border-radius: 4px;
 }
 .cards-services {
   display: flex;
@@ -167,7 +169,7 @@ svg {
   border-radius: 20px;
   flex: 1 0 auto;
 }
-.card h3 {
+.card h4 {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   background-color: #ea5455;
