@@ -27,6 +27,8 @@ a:hover {
   background-image: linear-gradient(to left, #ff925e, #ff725e);
   padding: 10px;
   min-width: 100%;
+  -webkit-filter: drop-shadow(50px 50px 5px #ccc);
+  filter: drop-shadow(0px 10px 5px #ccc);
 }
 nav h1 {
   color: #fbf8f3;
@@ -48,6 +50,24 @@ nav img {
 }
 .link-menu:hover {
   border-bottom: 2px solid #fbf8f3;
+  color: #fbf8f3;
+}
+.orcamento {
+  font-weight: bold;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #ff725e;
+  background-color: #fbf8f3;
+  border: 2px solid #fbf8f3;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.orcamento:hover{
+  color: #fbf8f3;
+  background-color: #ff725e;
+  border: 2px solid #fbf8f3;
 }
 .menu-itens {
   display: flex;
@@ -137,7 +157,6 @@ svg {
   text-align: justify;
   padding: 40px;
   font-size: 1.1rem;
-  
 }
 .about h1 {
   font-size: 1.8rem;
@@ -164,7 +183,7 @@ svg {
   margin-top: 10px;
   margin-bottom: 50px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #232323;
+  visibility: hidden;
 }
 .card {
   display: flex;
@@ -176,6 +195,9 @@ svg {
   border-radius: 20px;
   flex: 1 0 auto;
   padding-bottom: 20px;
+  -webkit-filter: drop-shadow(50px 50px 5px #232323);
+  filter: drop-shadow(0px 10px 5px #232323);
+  cursor: pointer;
 }
 .card h4 {
   border-top-left-radius: 12px;
@@ -184,6 +206,7 @@ svg {
   margin-top: 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid #fbf8f3;
+  font-weight: bold;
 }
 .card p {
   font-size: 0.9rem;
@@ -202,6 +225,10 @@ svg {
   font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: bold;
+  -webkit-filter: drop-shadow(50px 50px 5px #ccc);
+  filter: drop-shadow(0px 10px 5px #ccc);
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
 }
 .btn-card {
   margin-left: auto;
