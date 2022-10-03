@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Raleway', sans-serif;
   scroll-behavior: smooth;
 }
 body {
@@ -14,7 +12,13 @@ body {
   min-height: 100vh;
   max-width: 100vw;
 }
-
+a{
+  text-decoration: none;
+  color: #fbf8f3;
+}
+a:hover {
+  color: #ea5455;
+}
 /* NAVBAR */
 .nav-bar {
   display: flex;
@@ -133,6 +137,7 @@ svg {
   text-align: justify;
   padding: 40px;
   font-size: 1.1rem;
+  
 }
 .about h1 {
   font-size: 1.8rem;
@@ -158,23 +163,26 @@ svg {
   gap: 15px;
   margin-top: 10px;
   margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #232323;
 }
 .card {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background-color: #ff725e;
+  background-image: linear-gradient(to top, #ff925e, #ff725e);
   width: 250px;
   height: auto;
   border-radius: 20px;
   flex: 1 0 auto;
+  padding-bottom: 20px;
 }
 .card h4 {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  background-color: #ea5455;
   color: #fbf8f3;
   margin-top: 10px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #fbf8f3;
 }
 .card p {
@@ -187,12 +195,13 @@ svg {
 }
 .web-services h2 {
   background-color: #ff725e;
-  color: #fbf8f3;
+  color: #232323;
   padding-left: 10px;
   border-radius: 5px;
   text-align: start;
   font-size: 1.2rem;
   text-transform: uppercase;
+  font-weight: bold;
 }
 .btn-card {
   margin-left: auto;
@@ -200,11 +209,26 @@ svg {
   text-decoration: none;
   width: 50%;
   background-color: #fbf8f3;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   border-radius: 5px;
   color: #ea5455;
-  font-weight: 600;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: 0.5s;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.btn-card:hover{
+  border: 2px solid #fbf8f3;
+  background-color: #ff725e;
+  color: #fbf8f3;
+}
+.img-card {
+
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
 }
 
 /* MOBILE RESPONSIVE */
@@ -252,5 +276,23 @@ svg {
   .icon-main {
     margin-left: 10px;
     width: 25px;
+  }
+  .services-container h1 {
+    width: 95%;
+  }
+  .card {
+    margin: 0 20px;
+  }
+  .card h4 {
+    border-bottom: 2px solid #fbf8f3;
+  }
+  .web-services h2 {
+    margin: 0 20px;
+  }
+  .btn-card {
+    font-size: 1rem;
+  }
+  .cards-services {
+    border-bottom: 2px solid transparent;
   }
 }
