@@ -45,7 +45,7 @@ nav img {
   border: 2px solid transparent;
   padding-top: 5px;
   padding-bottom: 5px;
-  transition: 0.5s;
+  transition: 0.3s;
   cursor: pointer;
 }
 .link-menu:hover {
@@ -53,7 +53,7 @@ nav img {
   color: #fbf8f3;
 }
 .orcamento {
-  font-weight: bold;
+  /* font-weight: bold;
   background-color: transparent;
   text-transform: uppercase;
   color: #ff725e;
@@ -61,13 +61,56 @@ nav img {
   border: 2px solid #fbf8f3;
   border-radius: 5px;
   padding: 5px;
-  transition: 0.5s;
-  cursor: pointer;
-}
-.orcamento:hover{
+  transition: 0.3s;
+  cursor: pointer; */
+  position: relative;
   color: #fbf8f3;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.orcamento::before{
+  content: " ";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fbf8f3;
+  border-left: 2px solid #fbf8f3;
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+.orcamento::after{
+  content: " ";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #fbf8f3;
+  border-right: 2px solid #fbf8f3;
+  transition: 0.3s;
+  transition-delay: 0.3s;
+}
+.orcamento:hover::before,
+.orcamento:hover::after{
+  /* color: #fbf8f3;
   background-color: #ff725e;
-  border: 2px solid #fbf8f3;
+  border: 2px solid #fbf8f3; */
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s;
+}
+.orcamento:hover {
+  background-color: #fbf8f3;
+  color: #ff725e;
+  box-shadow: 0 0 40px #fbf8f3;
+  transition-delay: 0.3s;
 }
 .menu-itens {
   display: flex;
@@ -121,7 +164,7 @@ button {
   cursor: pointer;
   color: #fbf8f3;
   font-weight: bold;
-  transition: 0.5s;
+  transition: 0.3s;
   z-index: 1;
 }
 button:hover {
@@ -242,7 +285,7 @@ svg {
   color: #ea5455;
   font-weight: bold;
   border: 2px solid transparent;
-  transition: 0.5s;
+  transition: 0.3s;
   text-transform: uppercase;
   font-size: 0.8rem;
 }
