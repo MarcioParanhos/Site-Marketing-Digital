@@ -456,10 +456,10 @@ svg {
 .card p {
   font-size: 0.9rem;
   text-align: justify;
-  color: #fbf8f3;
+  color: var(--secondary-color);
   padding: 12px;
   font-weight: 500;
-  border-bottom: 1px solid #fbf8f3;
+  border-bottom: 1px solid var(--secondary-color);
 }
 .web-services h2 {
   background-color: var(--main-color);
@@ -572,7 +572,7 @@ svg {
     margin: 0 20px;
   }
   .card h4 {
-    border-bottom: 2px solid #fbf8f3;
+    border-bottom: 2px solid var(--secondary-color);
   }
   .web-services h2 {
     margin: 0 20px;
@@ -598,6 +598,9 @@ svg {
   .social-links {
     width: 100%;
     background-color: var(--secundary-bg-color);
+  }
+  #btn-services {
+    width: 100%;
   }
 
 }
