@@ -9,6 +9,7 @@
   --secondary-color: #fbf8f3;
   --secondary-text-color: #232323;
   --tertiary-color: #eff3f4;
+  --secundary-bg-color: #5c1011;
 }
 * {
   padding: 0;
@@ -259,11 +260,12 @@ svg {
 }
 .about-content p {
   text-align: justify;
-  padding: 40px;
+  padding: 18px;
   font-size: 1.1rem;
 }
 .about-content h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  padding: 8px;
 }
 .text-image-section {
   display: flex;
@@ -473,31 +475,47 @@ svg {
   margin-bottom: 20px;
   border: 1px solid #ccc;
 }
-.btn-card {
-  margin-left: auto;
-  margin-right: auto;
-  text-decoration: none;
-  width: 50%;
-  background-color: #fbf8f3;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  color: #ea5455;
-  font-weight: bold;
-  border: 2px solid transparent;
-  transition: 0.3s;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-}
-.btn-card:hover {
-  border: 2px solid #fbf8f3;
-  background-color: #ff725e;
-  color: #fbf8f3;
-}
 .img-card {
   width: 90px;
   height: 90px;
   margin: 0 auto;
+}
+
+/* FOOTER */
+
+.footer-container{
+ width: 100%;
+ height: auto;
+ background-color: var(--secundary-bg-color);
+ color: var(--secondary-color);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+#footer .company-title{
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+#footer .company-title h4{
+  padding: 1rem;
+  background-color: var(--main-color);
+  margin-bottom: 1rem;
+}
+.social-links {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.social-links i {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+.copy {
+  background-color: var(--secundary-bg-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem;
 }
 
 /* MOBILE RESPONSIVE */
@@ -564,4 +582,21 @@ svg {
   .cards-services {
     border-bottom: 2px solid transparent;
   }
+  #other-services {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  .copy {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .social-links {
+    width: 100%;
+    background-color: var(--secundary-bg-color);
+  }
+
 }
