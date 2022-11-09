@@ -500,6 +500,7 @@ svg {
   padding: 1rem;
   background-color: var(--main-color);
   margin-bottom: 1rem;
+  border-radius: 5px;
 }
 .social-links {
   display: flex;
