@@ -41,22 +41,18 @@ i {
 .parallax>use {
   animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
-
 .parallax>use:nth-child(1) {
   animation-delay: -2s;
   animation-duration: 7s;
 }
-
 .parallax>use:nth-child(2) {
   animation-delay: -3s;
   animation-duration: 10s;
 }
-
 .parallax>use:nth-child(3) {
   animation-delay: -4s;
   animation-duration: 13s;
 }
-
 .parallax>use:nth-child(4) {
   animation-delay: -5s;
   animation-duration: 20s;
@@ -442,7 +438,6 @@ svg {
   border-radius: 5px;
   flex: 1 0 auto;
   padding-bottom: 20px;
-  cursor: pointer;
 }
 .card h4 {
   border-top-left-radius: 12px;
@@ -524,6 +519,88 @@ svg {
 ::-webkit-scrollbar-thumb{
   background-color: var(--primary-color);
 }
+
+/* CLIENTES */
+#clients {
+  display: flex;
+  flex-direction: column;
+}
+.title-clients {
+  margin-bottom: 50px;
+  font-size: 1.5rem;
+}
+.wrapper {
+  position: relative;
+  perspective: 40em;
+  display: grid;
+  transform-style: preserve-3d;
+  margin-bottom: 60px;
+}
+.cards-clientes{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card-clientes {
+  grid-area: 1 / 1;
+  height: 200px;
+  width: 400px;
+  transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+  background: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  color: #232323;
+  text-transform: uppercase;
+  font-weight: 600;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px -3px rgba(0,0,0,.1);
+  cursor: pointer;
+}
+.card-clientes h1 {
+  font-size: 60px;
+  font-weight: 900;
+}
+.card-clientes img {
+  width: 300px;
+}
+.card-clientes .enclosed {
+  background: #232323;
+  line-height: 1;
+  color: var(--main-color);
+  padding: 0 5px;
+  display: inline-block;
+  transform: translate(-1px, 1px) scale(0.75);
+  transform-origin: right center;
+}
+.wrapper:before {
+  --bw: 9px;
+  grid-area: 1 / 1;
+  content: '';
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  margin-top: calc(-1 * var(--bw));
+  margin-left: calc(-1 * var(--bw));
+  background: transparent;
+  transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+  pointer-events: none;
+  border: var(--bw) solid #232323;
+  box-sizing: content-box;
+}
+.wrapper:hover > div,
+.wrapper:hover:before {
+  transform: none;
+}
+.wrapper > div,
+.wrapper:before {
+  will-change: transform;
+  transition: .3s transform cubic-bezier(.25,.46,.45,1);
+}
+
 
 /* MOBILE RESPONSIVE */
 @media screen and (max-width: 767px) {
